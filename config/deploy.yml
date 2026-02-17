@@ -17,7 +17,7 @@ proxy:
   hosts:
     - chat.vandelden.family
   forward_headers: true
-  app_port: 80  # Thruster listens on port 80
+  app_port: 80 # Thruster listens on port 80
   healthcheck:
     path: /up
     interval: 10
@@ -34,7 +34,7 @@ env:
   clear:
     RAILS_ENV: production
     RAILS_LOG_LEVEL: info
-    DISABLE_SSL: "true"  # Local network deployment
+    DISABLE_SSL: "true" # Local network deployment
 
 # Docker registry
 registry:
