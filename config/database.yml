@@ -9,6 +9,14 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
   timeout: 5000
   default_transaction_mode: immediate
+  pragmas: &default_pragmas
+    journal_mode: wal
+    synchronous: normal
+    busy_timeout: 5000
+    temp_store: memory
+    mmap_size: 134217728
+    cache_size: -20000
+    wal_autocheckpoint: 10000
 
 development:
   primary:
@@ -22,6 +30,13 @@ test:
   primary:
     <<: *default
     database: storage/db/test.sqlite3
+    timeout: 20000
+    pragmas:
+      <<: *default_pragmas
+      busy_timeout: 20000
+      synchronous: "OFF"
+      wal_autocheckpoint: 0
+      mmap_size: 268435456
 
 performance:
   primary:
