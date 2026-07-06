@@ -1,7 +1,7 @@
 # syntax = docker/dockerfile:1
 
 # Make sure it matches the Ruby version in .ruby-version and Gemfile
-ARG RUBY_VERSION=3.4.5
+ARG RUBY_VERSION=4.0.5
 FROM docker.io/library/ruby:$RUBY_VERSION-slim AS base
 
 # Rails app lives here
@@ -26,11 +26,11 @@ FROM base AS build
 
 # Install packages need to build gems
 RUN apt-get update -qq && \
-    apt-get install -y build-essential git pkg-config libyaml-dev  && \
+    apt-get install -y build-essential git pkg-config libssl-dev libyaml-dev  && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Install application gems
-COPY Gemfile Gemfile.lock vendor ./
+COPY Gemfile Gemfile.lock .ruby-version vendor ./
 
 RUN bundle install && \
     rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git

@@ -22,7 +22,6 @@ proxy:
     path: /up
     interval: 10
     timeout: 10
-    max_attempts: 7
 
 # Environment variables
 env:
