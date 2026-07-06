@@ -23,11 +23,11 @@ gem "resque", "~> 2.7.0"
 gem "resque-pool", "~> 0.7.1"
 
 # Assets
-gem "propshaft", github: "rails/propshaft", ref: "e49a9de659ff27462015e54dd832e86e762a6ddc"
-gem "importmap-rails", github: "rails/importmap-rails", ref: "51c1a531327fc04ed4552bb0fd523eb43561b817"
+gem "propshaft", github: "rails/propshaft"
+gem "importmap-rails", github: "rails/importmap-rails"
 
 # Hotwire
-gem "turbo-rails", github: "hotwired/turbo-rails", ref: "30cd8fcc6f82c1ad4edd1ed6069ba878f21f02b3"
+gem "turbo-rails", github: "hotwired/turbo-rails"
 gem "stimulus-rails"
 
 # Media handling
