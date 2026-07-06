@@ -14,7 +14,12 @@ module SystemTestHelper
   end
 
   def join_room(room)
-    visit room_url(room)
+    begin
+      visit room_url(room)
+    rescue Selenium::WebDriver::Error::StaleElementReferenceError
+      visit room_url(room)
+    end
+
     wait_for_cable_connection
     dismiss_pwa_install_prompt
   end
