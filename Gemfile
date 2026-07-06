@@ -5,7 +5,7 @@ ruby file: ".ruby-version"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Rails
-gem "rails", github: "rails/rails", branch: "main", ref: "1a02651ac37fb64b4de2a2b73461d86acf9c98fb"
+gem "rails", "~> 8.1"
 gem "ostruct"
 gem "benchmark"
 gem "connection_pool", "~> 2.5"
