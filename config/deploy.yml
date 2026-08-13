@@ -30,6 +30,7 @@ env:
     - SECRET_KEY_BASE
     - VAPID_PUBLIC_KEY
     - VAPID_PRIVATE_KEY
+    - CAMPFIRE_SELF_WEBHOOK_URL
   clear:
     RAILS_ENV: production
     RAILS_LOG_LEVEL: info

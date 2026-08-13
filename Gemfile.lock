@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/eirvandelden/exception_notification-campfire-once.git
+  revision: 8472c724465015c8e2d9ed4535c5e6e2c9bb817a
+  specs:
+    exception_notification-campfire-once (0.1.0.pre.git.8472c72)
+      exception_notification (>= 5.0)
+
+GIT
   remote: https://github.com/hotwired/turbo-rails.git
   revision: 37530c08780fa6f6dbb56a633de4b81169bdd174
   specs:
@@ -137,6 +144,9 @@ GEM
     ed25519 (1.4.0)
     erb (6.0.4)
     erubi (1.13.1)
+    exception_notification (5.0.1)
+      actionmailer (>= 7.1, < 9)
+      activesupport (>= 7.1, < 9)
     faker (3.8.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.17.4-aarch64-linux-gnu)
@@ -433,6 +443,8 @@ DEPENDENCIES
   capybara
   connection_pool (~> 2.5)
   debug
+  exception_notification (>= 5.0)
+  exception_notification-campfire-once!
   faker
   geared_pagination
   image_processing (>= 1.2)
