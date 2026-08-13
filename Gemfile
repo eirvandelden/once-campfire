@@ -37,6 +37,8 @@ gem "ruby-vips"
 # Telemetry
 gem "sentry-ruby"
 gem "sentry-rails"
+gem "exception_notification", ">= 5.0"
+gem "exception_notification-campfire-once", github: "eirvandelden/exception_notification-campfire-once"
 
 # Other
 gem "bcrypt"
